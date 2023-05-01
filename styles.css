@@ -5,6 +5,10 @@ body {
     padding: 0;
 }
 
+body {
+    display: flex;
+}
+
 #loading {
     position: fixed;
     top: 0;
@@ -23,7 +27,20 @@ body {
 #map { 
     height: 100%;
     width: 33.3%;
-    float: left;
+}
+
+#content {
+    height: 100%;
+    position: relative;
+    width: 66.6%;
+    display: flex;
+    flex-direction: column;
+}
+
+#toolbar {
+    width: 100%;
+    background-color: white;
+    padding: 20px;
 }
 
 #routes {

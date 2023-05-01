@@ -116,6 +116,12 @@ function init() {
     .then(() => {
         document.querySelector("#loading").style.display = "none";
 
+        const randomBtn = document.querySelector("#randomBtn");
+        randomBtn.addEventListener("click", () => {
+            const randomDiv = routeDivs[Math.floor(Math.random() * routeDivs.length)];
+            randomDiv.click();
+        });
+
         routeDivs.forEach(div => {
             const num = div.id.split("-")[1];
             div.addEventListener("click", () => {
